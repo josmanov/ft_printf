@@ -6,12 +6,12 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 06:03:59 by josmanov          #+#    #+#             */
-/*   Updated: 2024/06/29 10:21:29 by josmanov         ###   ########.fr       */
+/*   Updated: 2024/07/11 08:21:16 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_putnbr_base (long n, int base, const char format)
+int	ft_putnbr_base(long n, int base, const char format)
 {
 	int		count;
 	char	*symbols;
@@ -35,5 +35,5 @@ int	ft_putnbr_base (long n, int base, const char format)
 		count += ft_putnbr_base(n / base, base, format);
 		count += ft_putnbr_base(n % base, base, format);
 	}
-		return (count);
+	return (count);
 }
