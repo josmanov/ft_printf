@@ -6,16 +6,16 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 08:17:09 by josmanov          #+#    #+#             */
-/*   Updated: 2024/06/27 02:27:05 by josmanov         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:01:41 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdint.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 
 typedef struct s_list
 {
