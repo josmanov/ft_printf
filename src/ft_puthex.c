@@ -6,7 +6,7 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 10:00:09 by josmanov          #+#    #+#             */
-/*   Updated: 2024/07/26 18:13:04 by josmanov         ###   ########.fr       */
+/*   Updated: 2024/07/31 19:06:27 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -27,7 +27,7 @@ static int	handle_print_char(char c)
 
 static int	print_hex_digits(unsigned long n, const char *symbols)
 {
-	char	buffer[16];
+	char	hex[16];
 	int		i;
 	int		count;
 
@@ -37,12 +37,12 @@ static int	print_hex_digits(unsigned long n, const char *symbols)
 		return (handle_print_char('0'));
 	while (n > 0)
 	{
-		buffer[i++] = symbols[n % 16];
+		hex[i++] = symbols[n % 16];
 		n /= 16;
 	}
 	while (i > 0)
 	{
-		if (handle_print_char(buffer[--i]) == -1)
+		if (handle_print_char(hex[--i]) == -1)
 			return (-1);
 		count++;
 	}

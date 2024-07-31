@@ -6,7 +6,7 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 06:03:59 by josmanov          #+#    #+#             */
-/*   Updated: 2024/07/26 16:57:33 by josmanov         ###   ########.fr       */
+/*   Updated: 2024/07/31 18:48:06 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -23,7 +23,7 @@ static int	handle_int_min(int *n)
 
 static int	print_number(int n)
 {
-	char	c[12];
+	char	nbr[11];
 	int		i;
 	int		count;
 
@@ -37,12 +37,12 @@ static int	print_number(int n)
 	}
 	while (n > 0)
 	{
-		c[i++] = (n % 10) + '0';
+		nbr[i++] = (n % 10) + 48;
 		n /= 10;
 	}
 	while (i > 0)
 	{
-		if (write(1, &c[--i], 1) == -1)
+		if (write(1, &nbr[--i], 1) == -1)
 			return (-1);
 		count++;
 	}
@@ -61,7 +61,7 @@ int	ft_putnbr(int n)
 		if (write(1, "-", 1) == -1)
 			return (-1);
 		count++;
-		n = -n;
+		n *= -1;
 	}
 	count += print_number(n);
 	return (count);
