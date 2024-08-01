@@ -6,7 +6,7 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 02:07:57 by josmanov          #+#    #+#             */
-/*   Updated: 2024/07/30 13:19:37 by josmanov         ###   ########.fr       */
+/*   Updated: 2024/08/01 11:31:50 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -31,7 +31,10 @@ static int	print_format(char format, va_list ap)
 	else if (format == '%')
 		len += ft_putchar('%');
 	else
-		return (-1);
+	{
+		len += ft_putchar('%');
+		len += ft_putchar(format);
+	}
 	return (len);
 }
 
