@@ -6,7 +6,7 @@
 /*   By: josmanov <josmanov@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 05:08:35 by josmanov          #+#    #+#             */
-/*   Updated: 2024/07/26 18:40:44 by josmanov         ###   ########.fr       */
+/*   Updated: 2025/02/08 17:31:45 by josmanov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FT_PRINTF_H
@@ -24,4 +24,5 @@ int		ft_putnbr(int n);
 int		ft_puthex(unsigned long n, const char format);
 int		ft_putunsigned(unsigned int n);
 int		ft_putpointer(void *ptr);
+
 #endif
