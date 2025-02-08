@@ -48,7 +48,8 @@ To use `ft_printf` in your project, include the header file and link the compile
 ```c
 #include "ft_printf.h"
 
-int main() {
+int main(void)
+{
     ft_printf("Hello, %s! The number is %d.\n", "world", 42);
     return 0;
 }
