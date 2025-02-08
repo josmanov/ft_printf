@@ -46,7 +46,7 @@ It supports formatted output with a subset of the original `printf` functionalit
 To use `ft_printf` in your project, include the header file and link the compiled library:
 
 ```c
-#include "ft_printf.h"
+#include "./include/ft_printf.h"
 
 int main(void)
 {
